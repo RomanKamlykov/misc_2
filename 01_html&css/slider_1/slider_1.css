@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 14px;
+}
+
+/* ul.accordion li {
+  float: left;
+  width: 80px;
+  overflow: hidden;
+}
+
+ul.accordion {
+  width: 600px;
+} */
+
+.dws-wrapper {
+  width: 650px;
+  margin: 0 auto;
+}
+
+ul.accordion {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  padding: 0;
+}
+
+ul.accordion li {
+  width: 50px;
+  overflow: hidden;
+  padding: 1px 1px 0;
+  cursor: pointer;
+  display: block;
+  box-shadow: 1px 3px 15px #7e807e;
+  transition: all 1.5s;
+}
+
+ul.accordion img {
+  width: 300px;
+}
+
+ul.accordion li:hover {
+  width: 300px;
+  box-shadow: 1px 3px 15px #36c5fa;
+  transition: all 1s;
+}
+
+ul.accordion li:nth-child(4) {
+  width: 300px;
+}
+
+ul.accordion:hover li:nth-child(4) {
+  width: 50px;
+}
+
+ul.accordion li:nth-child(4):hover {
+  width: 300px;
+}

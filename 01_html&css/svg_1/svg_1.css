@@ -1,0 +1,21 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f7f3ed;
+}
+
+.llp-face-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  height: 50vh;
+  width: 50vw;
+}

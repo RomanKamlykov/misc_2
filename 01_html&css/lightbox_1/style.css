@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,700");
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.basic-example {
+  display: flex;
+  background: #ccc;
+}
+.basic-example div {
+  margin: 20px;
+}
+.basic-example div.text p:target {
+  background: red;
+}
+
+.portfolio {
+  padding: 30px;
+  background: #333;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 30px;
+}
+.portfolio .portfolio__item {
+  position: relative;
+  flex-basis: 30%;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+.portfolio .portfolio__item img {
+  width: 100%;
+  display: block;
+}
+.portfolio .portfolio__item .portfolio__desc {
+  padding: 20px;
+}
+.portfolio .portfolio__item .portfolio__desc .portfolio__title {
+  font-family: "Roboto Condensed", sans-srif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+.portfolio .portfolio__item .portfolio__desc .button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: limegreen;
+  padding: 10px 20px;
+}
+
+.portfolio__image,
+.portfolio-lightbox__image {
+  width: 100%;
+  display: block;
+}
+
+.portfolio-lightbox {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.portfolio-lightbox .portfolio-lightbox__content {
+  width: 75%;
+  padding: 20px;
+  background: black;
+  position: relative;
+}
+.portfolio-lightbox .portfolio-lightbox__content .close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  text-decoration: none;
+  border: white 2px solid;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-lightbox .portfolio-lightbox__content .close::after {
+  content: "X";
+  color: white;
+  font-weight: bold;
+}
+.portfolio-lightbox .portfolio-lightbox__content img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.portfolio-lightbox {
+  transition: opacity 250ms;
+  opacity: 0;
+  visibility: hidden;
+}
+.portfolio-lightbox:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*# sourceMappingURL=style.css.map */

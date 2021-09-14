@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <p>{{ status }}</p>
+  </div>
+
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        status: 'abc'
+      },
+      created: function() {
+        this.loadQuote();
+      },
+      methods: {
+        loadQuote: function() {
+          this.status = 'Loading...';
+          // var vm = this;
+          // axios.get('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+          // .then(response => vm.status = response.data[0])
+          // .catch(error => vm.status = 'Error:' + error)
+          fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+          .then(response => response.json())
+          .then(json => this.status = json[0])
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

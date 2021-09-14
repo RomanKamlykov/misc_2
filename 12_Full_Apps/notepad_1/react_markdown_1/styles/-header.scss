@@ -1,0 +1,43 @@
+@import "./_colors.scss";
+
+.app3 {
+  > header.header {
+    background-color: $teal-200;
+    position: fixed;
+    width: 100%;
+    display: flex; justify-content: space-between;
+
+    > .nav, .control {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        padding: 10px 20px;
+
+        button {
+          font-size: 100%;
+          font-family: inherit;
+          border: 0;
+          padding: 0;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        a {
+          text-decoration: none;
+          color: $dark;
+        }
+      }
+    }
+    > .nav li:not(:first-child)::before {
+      content: '/';
+      padding-right: 30px;
+    }
+  }
+}
+
+.app {
+
+}

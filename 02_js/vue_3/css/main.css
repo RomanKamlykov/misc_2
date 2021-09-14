@@ -1,0 +1,36 @@
+@font-face {
+  font-family: RunicAltNo;
+  src: url('../fonts/runic_altno.ttf');
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: bold;
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: 900;
+  src: url('../fonts/OpenSans-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: 100;
+  src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: ComicRunes;
+  src: url('../fonts/ComicRunes.otf');
+}
+
+body {
+  background-color: rgb(246, 246, 246);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./libs/netlify-identity-widget.js"></script>
+  <script src="./libs/vue.global.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./libs/normalize.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div data-netlify-identity-menu></div>
+  
+  <div id="app" class="app">
+    <div class="home">
+      <nav class="nav">
+        <ul>
+          <li><a href="/home">🏠</a></li>
+        </ul>
+        <ul>
+          <li><a href="/notes-tree">🌳</a></li>
+        </ul>
+      </nav>
+
+      <div class="child-notes">
+        <h3 class="child-notes__header">Notes</h3>
+        <ul>
+          <li v-for="note in childNotes" v-bind:key="note._id" class="child-notes__link">
+            <a v-bind:href="'/note?id='+note._id">{{ note.title || 'Untitled' }}</a>
+          </li>
+          <li class="child-notes__new-note">
+            <form action="/new_note" method="GET" v-on:submit="addANewNote">
+              <input type="hidden" name="parentNodeId" value="" />
+              <input type="submit" value="Add a note" class="btn-link" />
+            </form>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="search">
+        <h3 class="search__header">Search</h3>
+        <form action="/api/search" method="GET" v-on:submit="search">
+          <input type="text" name="search" />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
+      
+      <div class="recent-notes">
+        <h3 class="recent-notes__header">Recent</h3>
+        <ul>
+          <li v-for="note in recentNotes" v-bind:key="note._id" class="recent-notes__link">
+            <a v-bind:href="'/note?id='+note._id">{{ note.title || 'Untitled' }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/home.js"></script>
+</body>
+</html>

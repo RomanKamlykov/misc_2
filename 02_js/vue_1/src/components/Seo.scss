@@ -1,0 +1,21 @@
+.seo {
+  width: var(--desktop-width);
+  margin: auto;
+  padding: 20px 15px;
+  p {
+    font-size: 14px;
+    font-family: "OpenSans";
+    color: var(--black-color);
+    line-height: normal;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+  .seo {
+    width: var(--tablet-width);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  // work in progress
+}

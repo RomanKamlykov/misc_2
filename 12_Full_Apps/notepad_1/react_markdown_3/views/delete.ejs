@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap">
+  <link rel="stylesheet" href="./libs/normalize.css">
+  <link rel="stylesheet" href="./stylesheets/main.css">
+  <link rel="stylesheet" href="./stylesheets/delete.css">
+  <title>Delete page</title>
+</head>
+<body>
+  <div class="delete-page">
+    <form action="/delete" method="POST">
+      <input type="hidden" name="id" value="<%= id %>">
+      <label for="submit">Are you sure you want to delete the note?</label>
+      <input type="submit" id="submit" value="Delete page">
+      <a href="/view?id=<%= id %>">Go back</a>
+    </form>
+  </div>
+</body>
+</html>

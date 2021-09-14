@@ -1,0 +1,73 @@
+/*
+  section.updates
+  ├─ div.topic
+  ├─ div.items
+  │ ├─ v-for: div.item
+  │ ├─ a.prev
+  │ └─ a.next
+  └─ div.button
+    └─ a.btn.allUpdates
+*/
+
+.updates {
+  width: var(--desktop-width);
+  margin: auto;
+  .topic {
+    height: 80px;
+    display: flex; align-items: center;
+    img {
+      padding: 0 15px;
+    }
+    span {
+      font-size: 24px; font-family: "OpenSans"; font-weight: bold; color: var(--black-color); text-transform: uppercase;
+    }
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(4, 280px); justify-content: space-between; align-content: start;
+    row-gap: 30px;
+    position: relative;
+    .prev, .next {
+      width: 27px; height: 300px;
+      position: absolute; top: 0;
+      border: none;
+      cursor: pointer;
+      font-size: 35px; color: var(--black-color);
+      &:hover { background-color: var(--white-hover-color); }
+    }
+    .prev { left: -35px; }
+    .next { right: -35px; }
+  }
+  .button {
+    text-align: center;
+    line-height: 100px;
+    button {
+      width: 140px;
+      height: 40px;
+      font-size: 16px;
+      font-family: "Segoe UI"; color: var(--white-color);
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: var(--green-color);
+      &:hover { background-color: var(--green-hover-color); }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+  .updates {
+    width: var(--tablet-width);
+    .items {
+      grid-template-columns: repeat(3, 236px);
+      .prev, .next {
+        height: 276px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  // work in progress
+}

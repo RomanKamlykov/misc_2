@@ -1,0 +1,84 @@
+@import "./_colors.scss";
+
+.app {
+  .child-pages {
+    h3::after {
+      content: '📚';
+      font-size: smaller;
+      padding-left: 6px;
+    }
+    li::before {
+      content: '📄';
+      font-size: smaller;
+      padding-right: 6px;
+    }
+    li:last-child::before {
+      content: '➕';
+    }
+  }
+  .favorites {
+    h3::after {
+      content: '⭐';
+      font-size: smaller;
+      padding-left: 6px;
+    }
+    li::before {
+      content: '📄';
+      font-size: smaller;
+      padding-right: 6px;
+    }
+  }
+  .recent {
+    h3::after {
+      content: '⏳';
+      font-size: smaller;
+      padding-left: 6px;
+    }
+    li::before {
+      content: '📄';
+      font-size: smaller;
+      padding-right: 6px;
+    }
+  }
+  .search {
+    h3::after {
+      content: '🔎';
+      font-size: smaller;
+      padding-left: 6px;
+    }
+  }
+  .nav {
+    display: flex; justify-content: space-between;
+
+    .breadcrumb {
+      display: flex;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+          // text-decoration: underline;
+        }
+      }
+
+      li ~ li {
+        padding-left: 0.5rem;
+
+        &::before {
+          content: "/";
+          padding-right: 0.5rem;
+        }
+      }
+    }
+
+    .control {
+      display: flex;
+      
+      li + li {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}

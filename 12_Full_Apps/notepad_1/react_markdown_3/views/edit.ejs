@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap">
+  <link rel="stylesheet" href="./libs/normalize.css">
+  <link rel="stylesheet" href="./stylesheets/main.css">
+  <link rel="stylesheet" href="./stylesheets/edit.css">
+  <link rel="stylesheet" href="./stylesheets/_content.css">
+  <script src="./libs/marked.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="editor">
+    <form action="/edit" method="POST">
+      <input type="hidden" name="id" value="<%= note._id %>">
+      <textarea id="markdown" name="markdown" rows="4" cols="50"><%= note.markdown %></textarea>
+      
+      <ul class="control">
+        <li><a href="/help" class="btn-plain">❔</a></li>
+        <li><input type="submit" class="btn-plain" value="💾"></li>
+        <li><a href="/view?id=<%= note._id %>" class="btn-plain">🚪</a></li>
+      </ul>
+    </form>
+  </div>
+
+  <div class="preview content" id="content"></div>
+
+  <script>
+    const content = document.getElementById('content'); // get a reference
+    content.innerHTML = marked(document.forms[0][1].value); // set content onLoad
+
+    document.forms[0][1].addEventListener("input", (e) => {
+      content.innerHTML = marked(e.target.value); // change content onInput
+    });
+  </script>
+</body>
+</html>

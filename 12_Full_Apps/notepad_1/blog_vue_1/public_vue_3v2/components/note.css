@@ -1,0 +1,78 @@
+/* ----- .note ----- */
+.note {
+  width: 800px;
+  min-height: calc(100vh - 2.5rem);
+  padding: 1.25rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: var(--box-shadow);
+}
+.note > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.note .nav {
+  display: flex;
+  justify-content: space-between;
+}
+.note ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.note .breadcrumb {
+  display: flex;
+}
+.note .breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+.note .breadcrumb a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.note .breadcrumb li:not(:first-child) {
+  padding-left: 0.5rem;
+}
+.note .breadcrumb li:not(:first-child)::before {
+  content: "/";
+  padding-right: 0.5rem;
+}
+.note .control {
+  display: flex;
+}
+.note .control li:not(:first-child) {
+  padding-left: 0.5rem;
+}
+.note .control .control__move-note {
+  position: relative;
+}
+.note .control .control__move-note form {
+  display: none;
+  position: absolute;
+  top: 20.8px; right: 0;
+}
+.note .control .control__move-note form.active {
+  display: flex;
+}
+.note h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.note .child-notes .child-notes__header::after {
+  content: " 📚";
+  font-size: smaller;
+}
+.note .child-notes .child-notes__link::before {
+  content: "📄 ";
+  font-size: smaller;
+  display: inline-block;
+  width: 1.25rem;
+}
+.note .child-notes .child-notes__new-note::before {
+  content: "➕ ";
+  font-size: smaller;
+  display: inline-block;
+  width: 1.25rem;
+}
+.note .child-notes .child-notes__new-note form {
+  display: inline;
+}

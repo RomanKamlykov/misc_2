@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DBNAME": "blog",
+    "PASSWORD": "Ada117121",
+    "TOKEN_SECRET": "rfnfkbpf3jh",
+    "USER": "roman"
+  }
+}

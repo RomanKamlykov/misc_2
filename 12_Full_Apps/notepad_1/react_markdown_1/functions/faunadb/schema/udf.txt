@@ -1,0 +1,49 @@
+--- udf ---
+
+Update(Function("favoritePagesResolver"), {
+  body: Query(
+    Lambda(
+      ["isFavorite", "size", "after", "before"],
+      Let(
+        {
+          match: Match(Index("favoritePagesIndex"), Var("isFavorite")),
+          PageObj: Paginate(Var("match")),
+        },
+        Map(Var("PageObj"), Lambda("values", Get(Select(1, Var("values")))))
+      )
+    )
+  )
+})
+query {
+  favoriteArticles(isFavorite: true) {
+    data {
+      title
+    }
+  }
+}
+Update(Function("filteredArticlesResolver"), {
+  body: Query(
+    Lambda(
+      ["str", "size", "after", "before"],
+      Let(
+        {
+          match: Match(Index("filteredArticlesIndex")),
+          PageObj: Paginate(Var("match")),
+          filteredObj: Filter(
+            Var("PageObj"),
+            Lambda("x", ContainsStr(Select(1, Var("x")), Var("str")))
+          )
+        },
+        Map(Var("filteredObj"), Lambda("values", Get(Select(2, Var("values")))))
+      )
+    )
+  )
+})
+query {
+  filteredArticles(str: "3") {
+    data {
+      title
+    }
+  }
+}
+

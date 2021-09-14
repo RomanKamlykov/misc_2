@@ -1,0 +1,9 @@
+[
+  { "name": "All", "className": "all" },
+  { "name": "Thor’s hammers", "className": "thor_s_hammers" },
+  { "name": "Axes", "className": "axes" },
+  { "name": "Rings", "className": "rings" },
+  { "name": "Pendants", "className": "pendants" },
+  { "name": "Chains", "className": "chains" },
+  { "name": "Gold", "className": "gold" }
+]

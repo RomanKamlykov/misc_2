@@ -1,0 +1,7 @@
+<h1>Search users</h1>
+{{#if error}} <span>{{ error }}</span> {{/if}}
+
+<form method="get" action="/users/search">
+  <input type="text" name="id">
+  <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,21 @@
+--- indexes ---
+
+CreateIndex({
+  name: "favoritePagesIndex",
+  source: Collection("Page"),
+  terms: [{ field: ["data", "isFavorite"] }],
+  values: [
+    { field: ["data", "title"] },
+    { field: ["ref"] }
+  ]
+})
+CreateIndex({
+  name: "filteredPagesIndex",
+  source: Collection("Page"),
+  values: [
+    { field: ["data", "updatedAt"] },
+    { field: ["data", "markdown"] },
+    { field: ["ref"] }
+  ]
+})
+

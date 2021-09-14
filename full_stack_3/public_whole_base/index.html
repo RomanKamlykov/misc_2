@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="form">
+      <div>
+        <input type="text" class="form-control form-control-sm" v-model="brand" @keyup.enter="search">
+      </div>
+      <div>
+        <input type="text" class="form-control form-control-sm" v-model="number" @keyup.enter="search">
+      </div>
+      <div>
+        <input type="text" class="form-control form-control-sm" v-model="name" @keyup.enter="search">
+      </div>
+
+      <div>
+        <input type="file" class="form-control-file" ref="file" @change="uploadFileToServer">
+      </div>
+    </div>
+    <table class="table table-hover table-sm">
+      <thead class="thead-dark">
+        <tr>
+          <th>Карточка</th>
+          <th>Бренд</th>
+          <th>Код по каталогу</th>
+          <th>Наименование</th>
+          <th>Цена</th>
+          <th>Харьков</th>
+          <th>Киев</th>
+          <th>Другие</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in items" :key="item._id">
+          <td>{{ item.card }}</td>
+          <td>{{ item.brand }}</td>
+          <td>{{ item.number }}</td>
+          <td>{{ item.name }}</td>
+
+          <td>{{ item.price.toFixed(2) }}</td>
+          <td>{{ item.kharkiv }}</td>
+          <td>{{ item.kyiv }}</td>
+          <td>{{ item.others }}</td>
+
+          <!-- <template v-if="item.joinedData[0]">
+            <td>{{ item.joinedData[0].price }}</td>
+            <td>{{ item.joinedData[0].kharkiv }}</td>
+            <td>{{ item.joinedData[0].kyiv }}</td>
+            <td>{{ item.joinedData[0].others }}</td>
+          </template>
+          <template v-else>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </template> -->
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="btnLoadMore" v-if="items.length">
+      <button type="button" class="btn btn-primary" @click="loadMore">Load more...</button>
+    </div>
+
+    <!-- <div class="log"> -->
+      <div class="log" v-if="log.length">
+        <transition-group name="list" tag="div">
+          <div v-for="el in log" :key="el.id">{{ el.msg }}</div>
+        </transition-group>
+      </div>
+  </div>
+  <script src="SearchService.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

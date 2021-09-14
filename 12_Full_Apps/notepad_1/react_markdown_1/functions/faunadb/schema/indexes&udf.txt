@@ -1,0 +1,68 @@
+--- childPages query ---
+-- index --
+CreateIndex({
+  name: "childPagesIndex",
+  source: Collection("Page"),
+  terms: [{ field: ["data", "parentId"] }],
+  values: [
+    { field: ["data", "title"] },
+    { field: ["ref"] }
+  ]
+})
+-- udf --
+Update(Function("childPagesResolver"), {
+  body: Query(
+    Lambda(
+      ["parentId", "size", "after", "before"],
+      Let(
+        {
+          match: Match(Index("childPagesIndex"), Var("parentId")),
+          PageObj: Paginate(Var("match")),
+        },
+        Map(Var("PageObj"), Lambda("values", Get(Select(1, Var("values")))))
+      )
+    )
+  )
+})
+-- test --
+query {
+  childPages(parentId: 0) {
+    data {
+      _id
+      title
+    }
+  }
+}
+--- recentPages query ---
+-- index --
+CreateIndex({
+  name: "recentPagesIndex",
+  source: Collection("Page"),
+  values: [
+    { field: ["data", "updatedAt"], reverse: true },
+    { field: ["ref"] }
+  ]
+})
+-- udf --
+Update(Function("recentPagesResolver"), {
+  body: Query(
+    Lambda(
+      ["size", "after", "before"],
+      Let(
+        {
+          match: Match(Index("recentPagesIndex")),
+          PageObj: Paginate(Var("match"), { size: Var("size") }),
+        },
+        Map(Var("PageObj"), Lambda("values", Get(Select(1, Var("values")))))
+      )
+    )
+  )
+})
+-- test --
+query {
+  recentPages(_size: 10) {
+    data {
+      title
+    }
+  }
+}

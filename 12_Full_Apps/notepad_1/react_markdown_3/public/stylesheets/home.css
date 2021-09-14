@@ -1,0 +1,58 @@
+.home-page {
+  padding: 1.25rem;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: var(--box-shadow);
+
+  width: 800px;
+  min-height: calc(100vh - 2.5rem);
+}
+.home-page > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.home-page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-page .nav {
+  display: flex;
+  justify-content: space-between;
+}
+.home-page h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.home-page .child-notes h3::after {
+  content: " 📚";
+  font-size: smaller;
+}
+.home-page .child-notes li::before {
+  content: "📄 ";
+  font-size: smaller;
+  display: inline-block;
+  width: 1.25rem;
+}
+.home-page .child-notes form::before {
+  content: "➕ ";
+  font-size: smaller;
+  display: inline-block;
+  width: 1.25rem;
+}
+.home-page .child-notes li:last-of-type form {
+  display: inline;
+}
+.home-page .search-form h3::after {
+  content: " 🔎";
+  font-size: smaller;
+}
+.home-page .recent-notes h3::after {
+  content: " ⏳";
+  font-size: smaller;
+}
+.home-page .recent-notes li::before {
+  content: "📄 ";
+  font-size: smaller;
+  display: inline-block;
+  width: 1.25rem;
+}

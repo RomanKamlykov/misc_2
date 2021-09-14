@@ -1,0 +1,9 @@
+{
+  "env": {
+    "ATLAS_USERNAME": "roman",
+    "ATLAS_PASSWORD": "Ada117121",
+    "ATLAS_DBNAME": "blog4resume",
+    "JWT_SECRET": "Ada117121",
+    "PORT": "5000"
+  }
+}

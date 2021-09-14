@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="form">
+      <div>
+        <input type="text" class="form-control form-control-sm" v-model="code" @keyup.enter="search">
+      </div>
+      <div>
+        <input type="text" class="form-control form-control-sm" v-model="brand" @keyup.enter="search">
+      </div>
+      <div>
+        <input type="text" class="form-control form-control-sm" v-model="number" @keyup.enter="search">
+      </div>
+      <div>
+        <input type="text" class="form-control form-control-sm" v-model="title" @keyup.enter="search">
+      </div>
+
+      <div>
+        <input type="file" class="form-control-file" ref="file" @change="uploadFileToServer">
+      </div>
+    </div>
+    <table class="table table-hover table-sm">
+      <thead class="thead-dark">
+        <tr>
+          <th>Code</th>
+          <th>Brand</th>
+          <th>Number</th>
+          <th>Title</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in items" :key="item._id">
+          <td>{{ item.code }}</td>
+          <td>{{ item.brand }}</td>
+          <td>{{ item.number }}</td>
+          <td>{{ item.title }}</td>
+          <td>{{ Number.parseInt(item.price).toFixed(2) }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="btnLoadMore" v-if="items.length">
+      <button type="button" class="btn btn-primary" @click="loadMore">Load more...</button>
+    </div>
+  </div>
+  <script src="services.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

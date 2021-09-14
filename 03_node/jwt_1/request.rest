@@ -1,0 +1,13 @@
+### use VS Code extension - humao.rest-client
+GET http://localhost:5002/api
+###
+POST http://localhost:5002/api/login
+Content-Type: application/json
+
+{
+  "username": "Kyle",
+  "password": "password"
+}
+###
+POST http://localhost:5002/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImJyYWQiLCJlbWFpbCI6ImJyYWRAZ21haWwuY29tIn0sImlhdCI6MTYxNDQ2NDgzNCwiZXhwIjoxNjE0NDY0ODY0fQ.tvNzDFO0eBlYcUkp2BuyeLZZwaVVFNHluGFyTKbdAMw

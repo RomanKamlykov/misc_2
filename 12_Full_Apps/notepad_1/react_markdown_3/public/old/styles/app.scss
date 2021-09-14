@@ -1,0 +1,16 @@
+@import "./_colors.scss";
+
+.app {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $gray-100;
+  display: flex; justify-content: center;
+
+  .sheet {
+    width: 800px;
+    min-height: calc(100vh - 40px);
+    padding: 20px;
+    box-shadow: 0 3px 3px 1px rgba(60,64,67,.15);
+    background-color: $white;
+  }
+}

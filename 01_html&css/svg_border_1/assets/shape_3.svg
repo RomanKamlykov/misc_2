@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 110" width="190" height="110">
+	<style>
+		.shp0 {
+			stroke: #C4CBCF;
+			stroke-width: 2px;
+			fill: #F2FBFF;
+		} 
+	</style>
+	<path id="Shape 3" class="shp0" d="M5 25L25 25L25 5L45 25L185 25L185 105L5 105L5 25Z" vector-effect="non-scaling-stroke" />
+</svg>

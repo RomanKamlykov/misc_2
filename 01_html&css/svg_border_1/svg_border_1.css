@@ -1,0 +1,10 @@
+p {
+  width: 400px;
+  font-size: 24px;
+  border: 20px solid;
+  border-image: url("./assets/border.svg") stretch;
+  border-image-slice: 70;
+  background-image: url("./assets/bg.svg");
+  background-clip: content-box;
+  background-size: cover;
+}

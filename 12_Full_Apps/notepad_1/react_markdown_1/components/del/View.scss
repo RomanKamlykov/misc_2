@@ -1,0 +1,48 @@
+// A4 297 x 270 mm
+
+.view {
+  position: relative;
+  background-color: #ffffff;
+  margin: auto;
+  width: 800px;
+  min-height: 100%;
+  // box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 0 3px 3px 1px rgba(60,64,67,.15);
+  padding: 20px;
+}
+
+.view .control {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.view .control:hover {
+  opacity: 1.0;
+}
+
+.view .control .btn {
+  opacity: 0.5;
+}
+
+.view .control .btn:hover {
+  opacity: 1.0;
+  background-color: #f4f4f4;
+}
+
+// .app-main {
+//   position: relative;
+//   &:before {
+//     display: block;
+//     content: "";
+//     width: 100%;
+//     padding-top: (297 / 210) * 100%;
+//   }
+//   > .view {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//   }
+// }

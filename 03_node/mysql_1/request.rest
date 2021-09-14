@@ -1,0 +1,22 @@
+###
+GET http://localhost:3000/create_db
+###
+GET http://localhost:3000/create_post_table
+###
+GET http://localhost:3000/add_post_1
+###
+GET http://localhost:3000/get_posts
+###
+GET http://localhost:3000/get_post/1
+###
+GET http://localhost:3000/update_post/2
+###
+GET http://localhost:3000/delete_post/1
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Kyle",
+  "password": "password"
+}

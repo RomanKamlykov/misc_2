@@ -1,0 +1,27 @@
+.editor {
+  position: relative;
+  .control {
+    position: absolute;
+    top: 20px; right: 20px;
+    display: flex;
+
+    li + li {
+      padding-left: 0.5rem;
+    }
+  }
+
+  // padding: 10px !important;
+  form {
+    height: 100%;
+    // min-height: 100%;
+    
+    textarea {
+      // padding: 10px;
+      height: 100%;
+      // min-height: 100%;
+      width: 100%;
+      resize: none;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}

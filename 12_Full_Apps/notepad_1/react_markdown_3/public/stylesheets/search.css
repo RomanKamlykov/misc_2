@@ -1,0 +1,34 @@
+.search-page {
+  padding: 1.25rem;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: var(--box-shadow);
+
+  width: 800px;
+  min-height: calc(100vh - 2.5rem);
+}
+.search-page > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.search-page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.search-page .nav {
+  display: flex;
+  justify-content: space-between;
+}
+.search-page .search-form h3::after {
+  content: " 🔎";
+  font-size: smaller;
+}
+.search-page .notes h3::after {
+  content: " 📚";
+  font-size: smaller;
+}
+.search-page .notes li::before {
+  content: "📄 ";
+  font-size: smaller;
+  display: inline-block;
+  width: 1.25rem;
+}

@@ -1,0 +1,33 @@
+### use VS Code extension - humao.rest-client
+GET http://localhost:5002/api
+###
+POST http://localhost:5002/api/contact
+Content-Type: application/x-www-form-urlencoded
+
+name=Jotaro
+&email=test3@gmail
+###
+POST http://localhost:5002/api/contact
+Content-Type: application/json
+
+{
+  "name": "Jotaro",
+  "email": "test3@gmail",
+  "password": "password3"
+}
+###
+POST http://localhost:5002/api/login
+Content-Type: application/json
+x-auth-token: 123456
+
+{
+  "email": "test3@gmail",
+  "password": "password3"
+}
+###
+PUT http://localhost:5002/api/post/123
+Content-Type: application/json
+
+{
+  "title": "Post 1"
+}

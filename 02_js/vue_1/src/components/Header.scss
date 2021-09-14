@@ -1,0 +1,103 @@
+/*
+  header.header
+  ├─ div.introduction
+  ├─ div.icons
+  └─ nav.nav
+    ├─ div.burger
+    └─ ul
+      ├─ li
+      ├─ li.logo > img
+      └─ li
+*/
+
+.header {
+  width: var(--desktop-width); height: 180px;
+  margin: auto;
+  .introduction {
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;   
+    font-family: "OpenSans";
+    color: hsla(0, 0%, 15%, 0.7);
+  }
+  .icons {
+    height: 60px;
+    position: relative;
+    a {
+      position: absolute;
+      bottom: 11px;
+      &.auth { right: 85px; }
+      &.basket { right: 35px; }
+      img { vertical-align: bottom; }
+    }
+  }
+  .nav {
+    height: 64px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 48px; font-family: "RunicAltNo";
+    ul {
+      height: inherit;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 15px;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: var(--black-color);
+      }
+      li.logo {
+        --size: 180px;
+        width: var(--size); height: var(--size);
+        background-image: url(../assets/img/00_header/ellipse_big.svg);
+        background-position: center 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        img {
+          width: 165px;
+          position: relative;
+          top: 13px;
+          z-index: 100;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+  .header {
+    width: var(--tablet-width);
+    height: 108px;
+    .introduction {
+      display: none;
+    }
+    .icons {
+      height: 40px;
+      a {
+        bottom: 1px;
+        &.auth { right: 60px; }
+        &.basket { right: 15px; }
+      }
+    }
+    .nav {
+      height: 56px;
+      font-size: 24px;
+      font-family: "ComicRunes";
+      ul {
+        li { position: relative; bottom: 5px; }
+        li.logo {
+          --size: 120px;
+          background-position: center 15px;
+          img {
+            width: 110px;
+            top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  // work in progress
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap">
+  <link rel="stylesheet" href="./libs/normalize.css">
+  <link rel="stylesheet" href="./stylesheets/main.css">
+  <link rel="stylesheet" href="./stylesheets/move.css">
+  <title>Move page</title>
+</head>
+<body>
+  <div class="move-page">
+    <form action="/move" method="POST">
+      <input type="hidden" name="id" value="<%= id %>">
+      <label for="parentId">Enter a new "parentId"</label>
+      <input type="text" name="parentId" id="parentId">
+      <input type="submit" id="submit" value="Move page">
+      <a href="/view?id=<%= id %>">Go back</a>
+    </form>
+  </div>
+</body>
+</html>

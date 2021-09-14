@@ -1,0 +1,10 @@
+<a href="/">Back</a>
+<h1>{{user.first_name}} {{user.last_name}} [{{user.id}}]</h1>
+<ul>
+  <li><strong>Email:</strong> {{user.email}}</li>
+  <li><strong>Phone:</strong> {{user.phone}}</li>
+</ul>
+
+<form method="post" action="/user/delete/{{user.id}}?_method=DELETE">
+  <input type="submit" value="Delete user">
+</form>

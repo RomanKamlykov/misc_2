@@ -1,0 +1,93 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: inherit;
+  padding: inherit;
+  box-sizing: inherit;
+}
+div {
+  border: 1px solid black;
+  margin: 50px;
+  margin-bottom: 100px;
+  padding: 10px;
+}
+
+/*
+  1-й способ 
+  изображение по центру
+  все div одинакового размера
+*/
+/*
+div {
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  max-height: 100%;
+}
+*/
+
+/*
+  2-й способ 
+  изображение по центру
+  div по вертикали подстраивается под содержимое
+*/
+/*
+div {
+  width: 200px;
+  min-height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+
+/*
+  3-й способ 
+  херня, изображение чуть не поцентру, но сложный код, лучше и понятнее на флексах
+*/
+/*
+div {
+  --height: 200px;
+  width: 200px;
+  height: var(--height);
+  line-height: var(--height);
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+*/
+
+/*
+  итог
+  изображение по центру
+  лучший и понятный вариант
+*/
+div {
+  width: 200px;
+
+  /*строгий размер*/
+  /*height: 200px;*/
+  /*гибкий размер*/
+  min-height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%; /*необязательно*/
+  max-height: 100%;
+}

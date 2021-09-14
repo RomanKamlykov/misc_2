@@ -1,0 +1,79 @@
+.dws-menu [type="checkbox"],
+.dws-menu label.toggleSubmenu {
+  display: none;
+}
+
+.dws-menu label.toggleMenu {
+  background: #c9c9c9;
+  display: none;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dws-menu label.toggleMenu .fa {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  font-size: 18px;
+}
+
+@media all and (max-width: 800px) {
+  .dws-menu {
+    overflow: hidden; /* adds padding from the edges */
+  }
+  .dws-menu ul {
+    /* display: block; makes a vertical menu from ul elements (removes flex) */
+    /* display: none; */
+    display: block;
+    max-height: 0; /* to make smooth opening of the menu */
+    transition: max-height 0.3s;
+  }
+  .dws-menu li>ul li ul {
+    position: absolute;
+    top: auto;
+    right: auto;
+  }
+  .dws-menu label.toggleMenu {
+    display: block;
+  }
+  input.toggleMenu:checked + label.toggleMenu { /* tracks a click on the button */
+    background: #800;
+    color: #fff;
+  }
+  input.toggleMenu:checked ~ ul,
+  input.toggleSubmenu:checked ~ ul {
+    display: block;
+    position: relative;
+    max-height: 5000px; /* to make smooth opening of the menu */
+    transition: max-height 2s ease-in;
+  }
+  .dws-menu label.toggleSubmenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+  }
+  input.toggleSubmenu:checked ~ a {
+    background: #454547;
+    color: #fff;
+  }
+  .dws-menu label.toggleSubmenu .fa::before {
+    content: '\f0d7';
+    color: #454547;
+  }
+  .dws-menu label.toggleSubmenu .fa {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+  }
+  .dws-menu input.toggleSubmenu:checked ~ label.toggleSubmenu .fa::before {
+    content: '\f0d8';
+    color: #fff;
+  }
+}

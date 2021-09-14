@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- <form @submit.prevent="sendFile" enctype="multipart/form-data"> -->
+    <input type="file" ref="file" @change="selectFile" />
+    <!-- <input type="submit" value="Send"> -->
+    <button @click="sendFile">Send</button>
+    <!-- </form> -->
+
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data() {
+        return {
+          file: ""
+        }
+      },
+      methods: {
+        selectFile() {
+          this.file = this.$refs.file.files[0];
+        },
+        async sendFile(event) {
+          const formData = new FormData();
+          formData.append('file', this.file);
+          try {
+            await axios.post('http://localhost:5000/upload', formData, {
+              headers: { "Content-Type": "multipart/form-data"}
+            });
+            // await fetch('http://localhost:5000/upload', {
+            //   method: 'POST',
+            //   body: formData
+            // });
+            this.file = "";
+          } catch (err) {
+            console.log(err);
+          }
+        }
+
+      }
+    })
+  </script>
+</body>
+
+</html>

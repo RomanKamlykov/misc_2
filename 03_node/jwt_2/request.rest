@@ -1,0 +1,25 @@
+### use VS Code extension - humao.rest-client
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+  "username": "Kyle",
+  "password": "password"
+}
+###
+GET http://localhost:3001/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTYxNDQ2NTgwMSwiZXhwIjoxNjE0NDY1ODE2fQ.z0hFY6HBc8NLhQel4lJchamzUMPIN0rqHNevKXPOaYs
+###
+POST http://localhost:3001/api/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTYxMjEwOTk0MH0.dtLk-CqRwlmzBWQ61iwhcYtB9V9cZXwBLc5pMC-2qDw"
+}
+###
+DELETE http://localhost:3001/api/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTYxMjEwOTk0MH0.dtLk-CqRwlmzBWQ61iwhcYtB9V9cZXwBLc5pMC-2qDw"
+}

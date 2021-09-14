@@ -1,0 +1,40 @@
+/* ----- .edit ----- */
+.editor {
+  width: 800px;
+  min-height: calc(100vh - 2.5rem);
+  padding: 1.25rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: var(--box-shadow);
+  margin-right: 1.25rem;
+  position: relative;
+}
+.preview {
+  width: 800px;
+  min-height: calc(100vh - 2.5rem);
+  padding: 1.25rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: var(--box-shadow);
+}
+.editor form {
+  height: 100%;
+  width: 100%;
+}
+.editor form textarea {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.editor .control {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.editor .control li:not(:first-child) {
+  padding-left: 0.5rem;
+}

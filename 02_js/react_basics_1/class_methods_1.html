@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    class ClassComponent extends React.Component {
+      constructor(props) {
+        super(props);
+        // instance property/method
+        this.state = {
+          num: 1,
+        };
+        this.handleClick = this.handleClick.bind(this);
+      }
+
+      // prototype property/method
+      handleClick() {
+        console.log(this);
+      }
+      render() {
+        return (
+          <h1 onClick={this.handleClick}>Hello, world</h1>
+        );
+      }
+    }
+    ReactDOM.render(<ClassComponent />, document.getElementById('root'));
+  </script>
+</body>
+</html>

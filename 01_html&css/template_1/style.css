@@ -1,0 +1,35 @@
+.article {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #fff;
+  box-shadow: 0 10px 25px rgba(72, 72, 72, 0.1);
+}
+.article-photo {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+.article-content {
+  padding: 20px;
+}
+.article-title {
+  margin: 0 0 20px;
+  font-size: 35px;
+  line-height: 1.2;
+}
+.article-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.article-title a:hover {
+  text-decoration: underline;
+}
+.article-text {
+  margin-bottom: 20px;
+}
+.article-footer {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #868686;
+}

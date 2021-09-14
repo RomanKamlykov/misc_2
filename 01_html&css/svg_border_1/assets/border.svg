@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 70 70" width="70px" height="70px">
+  <polygon
+    points="10,20 20,20 20,10 30,20 60,20 60,60 10,60"
+    vector-effect="non-scaling-stroke"
+    stroke="#C4CBCF"
+    stroke-width="2px"
+    transform="scale(2)"
+    fill="#F2FBFF" />
+</svg>

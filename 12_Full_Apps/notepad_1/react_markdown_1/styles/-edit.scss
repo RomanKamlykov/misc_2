@@ -1,0 +1,37 @@
+@import "./_colors.scss";
+
+.app {
+  > main.edit, main.new {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    // height: 100%;
+    // min-height: 100%;
+    background-color: $gray-100;
+    display: flex; justify-content: center;
+
+    .editor, .preview {
+      margin: 0 10px;
+      padding: 20px;
+      width: 800px;
+      // height: 1130px;
+      min-height: 1130px;
+      background-color: $white;
+      box-shadow: var(--box-shadow);
+    }
+
+    .editor {
+      form {
+        height: 100%;
+        // min-height: 100%;
+
+        textarea {
+          height: 100%;
+          // min-height: 100%;
+          width: 100%;
+          resize: none;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}

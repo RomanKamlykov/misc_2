@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <header>
+    <div class="introduction">
+      <p>Handmade jewelry of the Viking Age and the ancient Slavs</p>
+    </div>
+
+    <div class="icons">
+      <img src="img/00_header/shopping_cart.png" alt="" class="shopping_cart" />
+      <img src="img/00_header/door_in.png" alt="" class="door_in" />
+    </div>
+
+    <div class="nav">
+      <div class="burger"></div>
+      <ul class="list-unstyled">
+        <li>Catalog</li>
+        <li>Updates</li>
+        <li>Reviews</li>
+        <li>About</li>
+        <li>Contacts</li>
+        <li>Policies</li>
+      </ul>
+
+      <img src="img/00_header/logo.png" alt="" class="logo" />
+      <div class="ellipse"></div>
+    </div>
+  </header> -->
+  <header id="header">
+  <div id="app">
+    <ul>
+      <li v-for="product in products">
+        <input type="number" v-model.number="product.quantity"> {{ product.name }}
+        <span v-if="product.quantity === 0">
+          - OUT OF STOCK
+        </span>
+        <button @click="product.quantity +=1">
+          Add
+        </button>
+      </li>
+    </ul>
+    <h2>Total Inventory: {{ totalProducts }}</h2>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        products: []
+      },
+      computed: {
+        totalProducts() {
+          return this.products.reduce((sum, product) => {
+            return sum + product.quantity
+          }, 0)
+        }
+      },
+      created() {
+        fetch('https://api.myjson.com/bins/74l63')
+          .then(response => response.json())
+          .then(json => {
+            this.products = json.products
+          })
+      }
+    })
+  </script>
+</body>
+
+</html>

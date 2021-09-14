@@ -1,0 +1,8 @@
+{
+  "env": {
+    "MONGODB_USER": "roman",
+    "MONGODB_PASSWORD": "Ada117121",
+    "MONGODB_DBNAME": "blog",
+    "TOKEN_SECRET": "rfnfkbpf3jh"
+  }
+}

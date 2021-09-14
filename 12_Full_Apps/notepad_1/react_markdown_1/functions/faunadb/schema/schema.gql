@@ -1,0 +1,15 @@
+type Page {
+  title: String!
+  markdown: String!
+  createdAt: Long!
+  updatedAt: Long!
+  parentId: ID!
+}
+
+type Query {
+  allPages: [Page!]
+  recentPages: [Page!] @resolver(name: "recentPagesResolver", paginated: true)
+  favoritePages: [Page!] @resolver(name: "favoritePagesResolver", paginated: true)
+  filteredPages(str: String!): [Page!] @resolver(name: "filteredPagesResolver", paginated: true)
+  childPages(parentId: ID!): [Page!] @resolver(name: "childPagesResolver", paginated: true)
+}

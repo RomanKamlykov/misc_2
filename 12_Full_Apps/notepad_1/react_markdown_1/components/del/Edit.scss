@@ -1,0 +1,26 @@
+.editor, .preview {
+  position: relative;
+}
+
+.editor .control, 
+.preview .control {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.editor .control:hover, 
+.preview .control:hover {
+  opacity: 1.0;
+}
+
+.editor .control .btn, 
+.preview .control .btn {
+  opacity: 0.5;
+}
+
+.editor .control .btn:hover, 
+.preview .control .btn:hover {
+  opacity: 1.0;
+  background-color: #f4f4f4;
+}

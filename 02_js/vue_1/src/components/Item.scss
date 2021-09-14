@@ -1,0 +1,76 @@
+/*
+  div.item
+  ├─ div.img - img
+  └─ div.text
+    ├─ div.name
+    ├─ div.price
+    │ ├─ span.price_current
+    │ └─ span.discount
+    │   ├─ span.price_old
+    │   └─ span.interest
+    └─ div.note
+*/
+
+.item {
+  --height: 300px;
+  --width: 280px;
+  width: var(--width); height: var(--height);
+  background-color: var(--white-color);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid black;
+  .img {
+    img {
+      width: var(--width);
+      height: calc(var(--height) * 0.75);
+      object-fit: cover;
+    }
+  }
+  .text {
+    height: calc(var(--height) * 0.25);
+    line-height: calc(var(--height) * 0.08);
+    font-family: "OpenSans"; font-size: 14px;
+    div {
+      padding: 0px 10px;
+      &.price {
+        display: flex; justify-content: space-between;
+        .price_current {
+          color: var(--black-color);
+          font-weight: bold;
+        }
+        .discount {
+          .price_old {
+            color: var(--green-color);
+            text-decoration: line-through;
+          }
+          .interest {
+            margin-left: 0.6em;
+            color: var(--white-color);
+            background-color: var(--green-color);
+          }
+        }
+      }
+      &.note {
+        font-size: 12px;
+        color: hsl(0, 0%, 67%);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+  .item {
+    --height: 276px;
+    --width: 236px;
+    .text {
+      div {
+        &.price {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  // work in progress
+}

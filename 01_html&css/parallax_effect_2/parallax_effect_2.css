@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%; /* the img-elements won't fall out of their parent */
+}
+
+.scene {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 110%; /* this is to avoid white lines when we move the picture */
+  height: 100%;
+}
+
+header {
+  display: flex; justify-content: center; align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+/* .layer-bg {
+  background: url('img/bg.png') center / cover no-repeat;
+}
+.layer-1 {
+  background: url('img/l1.png') center / cover no-repeat;
+}
+.layer-2 {
+  background: url('img/l2.png') center / cover no-repeat;
+}
+.layer-3 {
+  background: url('img/l3.png') center / cover no-repeat;
+}
+.layer-4 {
+  background: url('img/l4.png') center / cover no-repeat;
+}
+.layer-5 {
+  background: url('img/l5.png') center / cover no-repeat;
+} */

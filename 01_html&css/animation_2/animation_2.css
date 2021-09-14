@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.dws-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boximg {
+  position: relative; /* hides pseudo-elements */
+  font-family: Cuprum, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  width: 500px;
+  height: 300px;
+  border: 5px outset #b7bab7;
+  overflow: hidden;
+}
+.boximg img {
+  height: 300px;
+  transition: 0.5s;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container::before,
+.container::after {
+  content: '';
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1b70d5;
+  opacity: 0.1;
+  transition: 1s;
+}
+
+.container::before {
+  transform: translateX(-125%) rotate(45deg);
+}
+
+.container::after  {
+  transform: translateX(195%) rotate(45deg);
+}
+
+.text {
+  position: absolute;
+  top: 20%;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+}
+
+.text h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  transform: scale(0);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.text p {
+  font-size: 18px;
+  margin: 0 100px;
+  text-align: justify;
+  transform: scale(2);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.text a.bt {
+  position: absolute;
+  top: 100%;
+  left: 37%;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  padding: 10px 30px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.text a.bt::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+  transform: skew(-45deg)
+}
+
+.text a.bt:hover::before {
+  left: 150px;
+  transition: 0.5s ease-in-out;
+}
+
+.text a.bt:active {
+  border: 2px solid #b3b3b3;
+}
+
+.boximg:hover img {
+  transform: rotate(-30deg) scale(2);
+  filter: blur(2px);
+}
+
+.boximg:hover .container::before {
+  transform: translateX(92%) rotate(45deg) scale(2);
+  transition: 0.5s;
+  opacity: 0.6;
+}
+
+.boximg:hover .container::after {
+  transform: translateX(-25%) rotate(45deg) scale(2);
+  transition: 0.5s;
+  opacity: 0.6;
+}
+
+.boximg:hover .text h1,
+.boximg:hover .text p {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.boximg:hover .text a.bt {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.boximg:hover {
+  border: 5px inset #b7bab7;
+}

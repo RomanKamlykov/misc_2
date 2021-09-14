@@ -1,0 +1,27 @@
+{
+  "name": "full_stack_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "http-server ./public --cors='*' -o",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "exceljs": "^3.9.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3",
+    "nodemon": "^2.0.4"
+  }
+}

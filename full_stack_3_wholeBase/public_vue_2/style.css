@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: ivory;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#app {
+  width: 1140px;
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+.form div {
+  padding: 0.2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.form div:nth-child(1) {
+  width: 15%;
+}
+.form div:nth-child(2) {
+  width: 15%;
+}
+.form div:nth-child(3) {
+  width: 15%;
+}
+.form div:nth-child(4) {
+  width: 40%;
+}
+.form div:nth-child(5) {
+  width: 15%;
+}
+
+.table {
+  table-layout: fixed;
+}
+.table th, .table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.table th:nth-child(1), .table td:nth-child(1) {
+  max-width: 15%;
+  width: 15%;
+}
+.table th:nth-child(2), .table td:nth-child(2) {
+  max-width: 15%;
+  width: 15%;
+}
+.table th:nth-child(3), .table td:nth-child(3) {
+  max-width: 15%;
+  width: 15%;
+}
+.table th:nth-child(4), .table td:nth-child(4) {
+  max-width: 40%;
+  width: 40%;
+}
+.table th:nth-child(5), .table td:nth-child(5) {
+  max-width: 15%;
+  width: 15%;
+}
+.table th {
+  text-align: center;
+}
+.table td:nth-child(5) {
+  text-align: right;
+}
+
+.btnLoadMore {
+  text-align: center;
+  line-height: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */

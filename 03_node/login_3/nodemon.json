@@ -1,0 +1,7 @@
+{
+  "env": {
+    "PORT": "5000",
+    "MONGO_ATLAS_PW": "Ada117121",
+    "MONGO_ATLAS_DBNAME": "mongoose_1"
+  }
+}

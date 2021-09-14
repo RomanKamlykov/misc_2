@@ -1,0 +1,6 @@
+input:hover {
+  border: none;
+  background: none;
+  background: red;
+  border: 1px solid green;
+}

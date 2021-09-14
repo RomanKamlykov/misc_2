@@ -1,0 +1,18 @@
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 700px;
+  margin: 50px;
+}
+p::first-letter {
+  font-size: 6em;
+  font-weight: 700;
+  background-color: yellow;
+  padding: 0.05em;
+  margin-right: 0.05em;
+  border: 5px solid;
+  float: left;
+}
+p::first-line {
+  font-weight: 700;
+  text-transform: uppercase;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "express_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "simple": "nodemon simple.js",
+    "static": "nodemon static.js",
+    "api": "nodemon api.js",
+    "rendtemp": "nodemon rendtemp.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "moment": "^2.25.3",
+    "uuid": "^8.0.0"
+  }
+}

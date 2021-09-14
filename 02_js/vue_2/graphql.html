@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <button @click="getdata1">getdata1</button>
+    <div>
+      {{data1}}
+    </div>
+    <div>
+      {{data2.pokemons && data2.pokemons[0].name}}
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        data1: "abc",
+        data2: {}
+      },
+      methods: {
+        // getdata1: function() {
+        //   fetch('https://graphql-pokemon.now.sh')
+        //   .then(response => response.json())
+        //   .then(json => console.log(json)) // получаем error - message: "Must provide query string."
+        // }
+
+        // getdata1: function() {
+        //   fetch('https://graphql-pokemon.now.sh', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify({ query: '{ pokemons(first: 2) { name } }' })
+        //   })
+        //   .then(response => response.json())
+        //   .then(json => console.log(json)) // все ок
+        // }
+
+        // идем дальше
+        queryStr: function(arg) {
+          return `{
+            pokemons(first: ${arg}) {
+              id
+              name
+            }
+          }`
+        },
+        getdata1: function() {
+          fetch('https://graphql-pokemon.now.sh', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query: this.queryStr(3) })
+          })
+          .then(response => response.json())
+          .then(json => { console.log(json.data); this.data2 = json.data; }) // все ок
+        }
+      }
+    })
+  </script>
+</body>
+</html>

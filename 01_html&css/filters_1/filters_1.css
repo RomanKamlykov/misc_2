@@ -1,0 +1,54 @@
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content:
+  center; align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+}
+
+:root {
+  --color: #fff;
+}
+
+.content {
+  background: white;
+  /* width: 70vw; */
+  width: 600px;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  margin: 0 0 0.5em;
+  font-weight: 900;
+  color: #ee6352;
+  line-height: 0.8;
+}
+
+a {
+  color: #ee6352;
+}
+
+a:hover,
+a:focus {
+  /* filter: brightness(170%); */
+  /* retains color, opacity: 0.7 gives similar result, although it is only brighter and not darker */
+
+  /* filter: hue-rotate(180deg); */
+  /* gives a complimentary color */
+}
+
+.dark-bg {
+  background: #3378a3;
+  padding: 1em;
+}
+
+.dark-bg__body {
+  color: var(--color);
+  /* opacity: 0.7; or color: rgba(255, 255, 255, 0.7); */
+  /* gives a little blue color to the text */
+}

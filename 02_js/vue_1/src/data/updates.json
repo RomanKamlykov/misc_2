@@ -1,0 +1,12 @@
+[
+  { "img": "https://via.placeholder.com/400x400/f4fa9c/ffffff?text=item", "name": "Viking Skull Ring 1", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/f469a9/ffffff?text=item", "name": "Viking Skull Ring 2", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/ba53de/ffffff?text=item", "name": "Viking Skull Ring 3", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/88bef5/ffffff?text=item", "name": "Viking Skull Ring 4", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/f4fa9c/ffffff?text=item", "name": "Viking Skull Ring 5", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/f469a9/ffffff?text=item", "name": "Viking Skull Ring 6", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/ba53de/ffffff?text=item", "name": "Viking Skull Ring 7", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/88bef5/ffffff?text=item", "name": "Viking Skull Ring 8", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/f4fa9c/ffffff?text=item", "name": "Viking Skull Ring 9", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"},
+  { "img": "https://via.placeholder.com/400x400/f469a9/ffffff?text=item", "name": "Viking Skull Ring 10", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping"}
+]

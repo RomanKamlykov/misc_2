@@ -1,0 +1,8 @@
+module.exports = {
+  NODE_ENV: process.env.NODE_ENV,
+  PORT: process.env.PORT,
+  MONGODB_URI: process.env.MONGODB_URI,
+  MONGODB_COLLECTION: process.env.MONGODB_COLLECTION,
+  MAX_SIZE_OF_UPLOADED_FILE: process.env.MAX_SIZE_OF_UPLOADED_FILE,
+  NUMBER_OF_VALUES_ON_A_PAGE: process.env.NUMBER_OF_VALUES_ON_A_PAGE
+}

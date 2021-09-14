@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+.section {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid black;
+  background-color: whitesmoke;
+}
+.section1 { background-color: #b5ff84;}
+.section2 { background-color: #ffa984;}
+.section3 { background-color: #ce84ff;}
+.inverse {
+  background-color: whitesmoke;
+}

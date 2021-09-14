@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap">
+  <link rel="stylesheet" href="./libs/normalize.css">
+  <link rel="stylesheet" href="./stylesheets/main.css">
+  <link rel="stylesheet" href="./stylesheets/home.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="home-page">
+    
+    <nav class="nav">
+      <ul>
+        <li><a href="/home">🏠</a></li>
+      </ul>
+      <ul>
+        <li><a href="/notes-tree">🌳</a></li>
+      </ul>
+    </nav>
+
+    <div class="child-notes">
+      <h3>Notes</h3>
+      <ul>
+        <% childNotes.forEach((note) => { %>
+          <li>
+            <a href="/view?id=<%= note._id %>"><%= note.title || 'Untitled' %></a>
+          </li>
+        <% }); %>
+      </ul>
+      <form action="/home" method="POST">
+        <input type="hidden" name="parentNodeId" value="">
+        <input type="submit" value="Add a note" class="btn-link">
+      </form>
+    </div>
+    
+    <div class="search-form">
+      <h3>Search</h3>
+      <form action="/search" method="GET">
+        <input type="text" name="query" id="search">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    
+    <div class="recent-notes">
+      <h3>Recent</h3>
+      <ul>
+        <% recentNotes.forEach((note) => { %>
+          <li>
+            <a href="/view?id=<%= note._id %>"><%= note.title || 'Untitled' %></a>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+    
+  </div>
+</body>
+</html>

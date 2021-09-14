@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap">
+  <link rel="stylesheet" href="./libs/normalize.css">
+  <link rel="stylesheet" href="./stylesheets/main.css">
+  <link rel="stylesheet" href="./stylesheets/view.css">
+  <link rel="stylesheet" href="./stylesheets/_content.css">
+  <title>View page</title>
+</head>
+<body>
+  <div class="view-page">
+
+    <nav class="nav">
+      <ul class="breadcrumb">
+        <li><a href="/home">🏠</a></li>
+        <% path.forEach((note) => { %>
+          <li><a href="/view?id=<%= note._id %>"><%= note.title || 'Untitled' %></a></li>
+        <% }); %>
+      </ul>
+      <ul class="control">
+        <li><a href="/move?id=<%= note._id %>" class="btn-plain">🔃</a></li>
+        <li><a href="/edit?id=<%= note._id %>" class="btn-plain">✏️</a></li>
+        <li><a href="/delete?id=<%= note._id %>" class="btn-plain">🗑️</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <%- html %>
+    </div>
+
+    <div class="child-notes">
+      <h3>Pages</h3>
+      <ul>
+        <% childNotes.forEach((note) => { %>
+          <li>
+            <a href="/view?id=<%= note._id %>"><%= note.title || 'Untitled' %></a>
+          </li>
+        <% }); %>
+      </ul>
+      <form action="/view" method="POST">
+        <input type="hidden" name="parentNodeId" value="<%= note.nodeId %>">
+        <input type="submit" value="Add a note" class="btn-link">
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>

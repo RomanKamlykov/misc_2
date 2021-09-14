@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./libs/netlify-identity-widget.js"></script>
+  <script src="./libs/vue.global.js"></script>
+  <script src="./libs/marked.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./libs/normalize.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div data-netlify-identity-menu></div>
+  
+  <div id="app" class="app">
+    <div class="note">
+      <nav class="nav">
+        <ul class="breadcrumb">
+          <li>
+            <a href="/home">🏠</a>
+          </li>
+          <li v-for="note in path" v-bind:key="note._id">
+            <a v-bind:href="'/note?id='+note._id">{{ note.title || 'Untitled' }}</a>
+          </li>
+        </ul>
+        <ul class="control">
+          <li>
+            <button class="btn-plain" id="move-note-btn">🔃</button>
+          </li>
+          <li>
+            <a v-bind:href="'/edit?id='+id" class="btn-plain">✏️</a>
+          </li>
+          <li>
+            <button class="btn-plain" id="delete-btn">🗑️</button>
+          </li>
+        </ul>
+      </nav>
+  
+      <div class="content" v-html="html">
+      </div>
+      
+      <div class="child-notes">
+        <h3 class="child-notes__header">Notes</h3>
+        <ul>
+          <li v-for="note in childNotes" v-bind:key="note._id" class="child-notes__link">
+            <a v-bind:href="'/note?id='+note._id">{{ note.title || 'Untitled' }}</a>
+          </li>
+          <li class="child-notes__new-note">
+            <form action="/new_note" method="GET" v-on:submit="addANewNote">
+              <input type="hidden" name="parentNodeId" v-bind:value="id" />
+              <input type="submit" value="Add a note" class="btn-link" />
+            </form>
+          </li>
+        </ul>
+      </div>
+  
+    </div>
+  </div>
+
+  <script src="./scripts/note.js"></script>
+</body>
+</html>

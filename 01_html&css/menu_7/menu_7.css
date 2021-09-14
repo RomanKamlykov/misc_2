@@ -1,0 +1,124 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.section {
+  height: 100vh;
+  background-color: #7b1fa2;
+  display: flex; justify-content: center; align-items: center; /* places the a-element in the center of the screen */
+}
+
+.menu-btn {
+  display: block; /* allows the a-element to have a width, height and top, left etc. */
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  height: 2px;  top: 50%; margin-top: -1px;  /* places the span-element in the center */
+  width: 20px; left: 50%; margin-left: -10px; /* places the span-element in the center */
+  background-color: #222;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  transition: 0.2s;
+}
+
+.menu-btn span::before {
+  transform: translateY(-5px)
+}
+
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+
+/* cross */
+.menu-btn_active span::before {
+  transform: rotate(45deg);
+}
+
+.menu-btn_active span {
+  height: 0; /* hides the middle 'bar' */
+}
+
+.menu-btn_active span::after {
+  transform: rotate(-45deg);
+}
+
+/* 1 arrow */
+/*
+.menu-btn_active span::before {
+  transform: rotate(35deg);
+  transform-origin: left bottom;
+  width: 10px;
+}
+
+.menu-btn_active span::after {
+  transform: rotate(-35deg);
+  transform-origin: left top;
+  width: 10px;
+}
+*/
+/* 2 arrow */
+/*
+.menu-btn_active span::before {
+  transform: rotate(-35deg);
+  transform-origin: left bottom;
+  width: 10px;
+}
+
+.menu-btn_active span::after {
+  transform: rotate(35deg);
+  transform-origin: left top;
+  width: 10px;
+}
+*/
+
+.menu a {
+  color: #222;
+  display: flex; justify-content: center; align-items: center; /* places icons in the center */
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: 0.3s;
+
+  position: absolute;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  z-index: 0;
+}
+
+.menu-block {
+  position: relative; /* ".menu a" will be positioned relatively to the ".menu-block", not to the "body" */
+}
+
+.menu_active a:nth-child(1) {
+  transform: translate(150%, 0%);
+}
+.menu_active a:nth-child(2) {
+  transform: translate(105%, 105%);
+}
+.menu_active a:nth-child(3) {
+  transform: translate(0%, 150%);
+}
+
+.menu a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.menu a:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.menu a:nth-child(3) {
+  transition-delay: 0.3s;
+}

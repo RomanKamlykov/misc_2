@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Trade Winds';
+  font-size: 20px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+body {
+  margin: 50px auto;
+}
+
+:root {
+  --color1: hsla(56, 98%, 77%, 1);
+  --color2: hsla(143, 67%, 87%, 1);
+  --color3: hsla(35, 100%, 67%, 1);
+  --color4: hsla(75, 91%, 78%, 1);
+  --color5: hsla(14, 100%, 74%, 1);
+}
+
+header, nav, main, section, article, aside, footer {
+  outline: 1px solid black; border: 1px solid transparent;
+}
+
+nav, section, article, p {
+  margin: 15px 25px;
+}
+
+body {
+  width: 700px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+}    
+
+header {
+  grid-area: header;
+  background-color: var(--color1);
+}
+
+nav {
+  background-color: var(--color2);
+}
+
+main {
+  grid-area: main;
+  background-color: var(--color3);
+}
+
+section {
+  background-color: var(--color1);
+}
+
+article {
+  background-color: var(--color3);
+}
+
+aside {
+  grid-area: aside;
+  background-color: var(--color2);
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--color4);
+}

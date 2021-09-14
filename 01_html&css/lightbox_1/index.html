@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- ---------- first part ---------- -->
+  <div class="basic-example">
+    <div class="links">
+      <p><a href="#one">Try</a></p>
+      <p><a href="#two">Clicking</a></p>
+      <p><a href="#three">These</a></p>
+    </div>
+    <div class="text">
+      <p id="one">This is paragraph one</p>
+      <p id="two">This is paragraph two</p>
+      <p id="three">This is paragraph three</p>
+    </div>
+  </div>
+
+  <!-- ---------- second part ---------- -->
+  <div class="portfolio">
+    <!-- portfolio item 1 -->
+    <div class="portfolio__item">
+      <img src="//unsplash.it/300?image=1080" alt="">
+      <div class="portfolio__desc">
+        <h3 class="portfolio__title">This is the title</h3>
+        <a href="#portfolio-item-1" class="button">More info</a>
+      </div>
+    </div>
+
+    <!-- portfolio item 2 -->
+    <div class="portfolio__item">
+      <img src="//unsplash.it/300?image=1070" alt="">
+      <div class="portfolio__desc">
+        <h3 class="portfolio__title">This is the title</h3>
+        <a href="#portfolio-item-2" class="button">More info</a>
+      </div>
+    </div>
+
+    <!-- portfolio item 3 -->
+    <div class="portfolio__item">
+      <img src="//unsplash.it/300?image=1074" alt="">
+      <div class="portfolio__desc">
+        <h3 class="portfolio__title">This is the title</h3>
+        <a href="#portfolio-item-3" class="button">More info</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- third part ---------- -->
+  <!-- The portfolio lightboxes -->
+  <div class="portfolio-lightboxes">
+    <!-- lightbox 1 -->
+    <div class="portfolio-lightbox" id="portfolio-item-1">
+      <div class="portfolio-lightbox__content">
+        <a href="#!" class="close"></a>
+        <img src="//unsplash.it/900/400?image=1080" alt="">
+        <h3 class="portfolio-lightbox__title">This would be the title inside the lightbox</h3>
+        <p class="portfolio-lightbox__body">This would be the content inside the lightbox</p>
+      </div>
+    </div>
+
+    <!-- lightbox 2 -->
+    <div class="portfolio-lightbox" id="portfolio-item-2">
+      <div class="portfolio-lightbox__content">
+        <a href="#!" class="close"></a>
+        <img src="//unsplash.it/900/400?image=1070" alt="">
+        <h3 class="portfolio-lightbox__title">This would be the title inside the lightbox</h3>
+        <p class="portfolio-lightbox__body">This would be the content inside the lightbox</p>
+      </div>
+    </div>
+
+    <!-- lightbox 3 -->
+    <div class="portfolio-lightbox" id="portfolio-item-3">
+      <div class="portfolio-lightbox__content">
+        <a href="#!" class="close"></a>
+        <img src="//unsplash.it/900/400?image=1074" alt="">
+        <h3 class="portfolio-lightbox__title">This would be the title inside the lightbox</h3>
+        <p class="portfolio-lightbox__body">This would be the content inside the lightbox</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

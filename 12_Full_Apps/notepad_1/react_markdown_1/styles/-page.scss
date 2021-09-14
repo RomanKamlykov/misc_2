@@ -1,0 +1,93 @@
+@import "./_colors.scss";
+
+.app2 {
+  main.page {
+    .subpages {
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      padding-top: 10px;
+    }
+  }
+}
+
+.app {
+  > main.page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $gray-100;
+    display: flex; justify-content: center;
+
+    .article {
+      background-color: $white;
+      width: 800px;
+      min-height: 1130px;
+      box-shadow: 0 3px 3px 1px rgba(60,64,67,.15);
+      padding: 20px;
+    }
+
+    .nav {
+      display: flex; justify-content: space-between;
+      li {
+        button {
+          font-size: 100%;
+          font-family: inherit;
+          border: 0;
+          padding: 0;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        a {
+          text-decoration: none;
+          color: $dark;
+        }
+      }
+
+      .breadcrumb {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        li + li {
+          padding-left: 0.5rem;
+          &::before {
+            content: "/";
+            padding-right: 0.5rem;
+            color: #6c757d;
+          }
+        }
+      }
+      .control {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        li + li {
+          padding-left: 0.5rem;
+        }
+      }
+    }
+    .subpages {
+      list-style: none;
+      padding: 0;
+
+      li {
+        button {
+          font-size: 100%;
+          font-family: inherit;
+          border: 0;
+          padding: 0;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        a {
+          text-decoration: none;
+          color: $dark;
+        }
+      }
+      span {
+        font-size: smaller;
+      }
+      // li::before {
+      //   content: '📄';
+      //   padding-right: 0.5rem;
+      // }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "extends": "../.eslintrc.json",
+  "globals": {
+    "window": "readonly",
+    "document": "readonly",
+    "fetch": "readonly",
+    "localStorage": "readonly",
+    "alert": "readonly",
+    "Vue": "readonly",
+    "VueRouter": "readonly"
+  },
+  "rules": {
+    "import/extensions": "off",
+    "import/newline-after-import": "off",
+    "import/first": "off",
+    "no-alert": "off"
+  }
+}

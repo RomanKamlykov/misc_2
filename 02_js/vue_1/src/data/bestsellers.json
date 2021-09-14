@@ -1,0 +1,15 @@
+[
+  { "img": "https://via.placeholder.com/400x400/f4fa9c/ffffff?text=item", "name": "Thor’s hammer 1", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "thor_s_hammers"},
+  { "img": "https://via.placeholder.com/400x400/f469a9/ffffff?text=item", "name": "Thor’s hammer 2", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "thor_s_hammers"},
+  { "img": "https://via.placeholder.com/400x400/ba53de/ffffff?text=item", "name": "Axe 1", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "axes"},
+  { "img": "https://via.placeholder.com/400x400/88bef5/ffffff?text=item", "name": "Axe 2", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "axes"},
+  { "img": "https://via.placeholder.com/400x400/f4fa9c/ffffff?text=item", "name": "Ring 1", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "rings"},
+  { "img": "https://via.placeholder.com/400x400/f469a9/ffffff?text=item", "name": "Ring 2", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "rings"},
+  { "img": "https://via.placeholder.com/400x400/ba53de/ffffff?text=item", "name": "Pendant 1", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "pendants"},
+  { "img": "https://via.placeholder.com/400x400/88bef5/ffffff?text=item", "name": "Pendant 2", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "pendants"},
+  { "img": "https://via.placeholder.com/400x400/f4fa9c/ffffff?text=item", "name": "Chain 1", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "chains"},
+  { "img": "https://via.placeholder.com/400x400/f469a9/ffffff?text=item", "name": "Chain 2", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "chains"},
+  { "img": "https://via.placeholder.com/400x400/ba53de/ffffff?text=item", "name": "Gold 1", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "gold"},
+  { "img": "https://via.placeholder.com/400x400/88bef5/ffffff?text=item", "name": "Gold 2", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "gold"},
+  { "img": "https://via.placeholder.com/400x400/f4fa9c/ffffff?text=item", "name": "Gold 3", "price": "USD 2888.00", "priceOld": "USD 2888.00", "interest": "(10% off)", "info": "Free shipping", "category": "gold"}
+]

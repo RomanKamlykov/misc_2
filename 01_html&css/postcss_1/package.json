@@ -1,0 +1,22 @@
+{
+  "name": "postcss_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server -o",
+    "parcel": "npm run clean && parcel index.html --out-dir dev",
+    "clean": "rimraf ./dev && rimraf -rf ./.cache"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^2.0.0",
+    "postcss-uncss": "^0.17.0",
+    "rimraf": "^3.0.2",
+    "uncss": "^0.17.3"
+  }
+}

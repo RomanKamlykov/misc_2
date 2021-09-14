@@ -1,0 +1,4 @@
+node_modules
+.env
+config_old.js
+routes/services/getDataFromExcel_old.js
