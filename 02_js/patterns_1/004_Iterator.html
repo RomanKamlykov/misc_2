@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Итератор (Iterator)</title>
+</head>
+<body>
+    <script>
+        // Шаблон Итератор применяется когда есть объект, содержащий совокупность данных (в виде определенной структуры),
+        // а нам необходимо обеспечить доступ к этим данным не раскрыв способ хранения данных.
+
+        // объект созданный по шаблону Итератор
+        const collection = (function () {
+
+            let current = -1 // указатель на элемент в структуре данных
+            const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0] // скрытая структура данных.
+            const count = data.length
+
+            return {
+                // метод для перемещения по структуре данных
+                moveNext() {
+                    if (current == count - 1) {
+                        return false
+                    }
+                    else {
+                        current++
+                        return true
+                    }
+                },
+
+                // метод для получения текущего элемента
+                getCurrent() {
+                    return data[current]
+                },
+
+                // метод для сброса указателя на начало коллекции
+                reset() {
+                    current = -1
+                }
+            }
+        })()
+    </script>
+
+    <script>
+        while (collection.moveNext()) {
+            const temp = collection.getCurrent()
+            document.write("<p>" + temp + "</p>")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+### https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+### Hello World!
+GET http://localhost:3000/
+
+### get all
+GET http://localhost:3000/products
+
+### get one
+GET http://localhost:3000/products/1638287501185
+
+### create one
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "title": "title_1",
+  "price": 70
+}
+
+### delete one
+DELETE http://localhost:3000/products/1638287783598
+
+### update one
+PUT http://localhost:3000/products/1638287501185
+Content-Type: application/json
+
+{
+  "title": "updated title_1",
+  "description": "description_1",
+  "price": 70
+}

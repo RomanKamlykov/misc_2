@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singleton и оператор new</title>
+</head>
+<body>
+    <script>
+        function Sun() {
+            // проверяем наличие экземпляра созданного ранее
+            if (typeof Sun.instance === "object") {
+                return Sun.instance
+            }
+
+            // создаем новый экземпляр
+            this.color = "yellow"
+            this.isBig = true
+
+            // cохраняем созданный экземпляр для повторного использования.
+            Sun.instance = this
+
+            // неявный возврат экземпляра
+            // return this
+        }
+
+        const sun1 = new Sun()
+        const sun2 = new Sun()
+        console.log(sun1 === sun2) // true
+    </script>
+</body>
+</html>

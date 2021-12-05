@@ -1,0 +1,31 @@
+### default
+GET http://localhost:3000/
+
+### get all
+GET http://localhost:3000/items
+
+### get one
+GET http://localhost:3000/items/61a6172c3272294ae20a397e
+
+### create one
+POST http://localhost:3000/items
+Content-Type: application/json
+
+{
+  "name": "name3",
+  "description": "description3",
+  "qty": 7
+}
+
+### delete one
+DELETE http://localhost:3000/items/61a6172c3272294ae20a397e
+
+### update one
+PUT http://localhost:3000/items/61a617943272294ae20a3983
+Content-Type: application/json
+
+{
+  "name": "updated2 name2",
+  "description": "description1",
+  "qty": 7
+}

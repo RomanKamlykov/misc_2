@@ -12,8 +12,8 @@ async function setConnection(func) {
 async function getDocuments() {
   const notes = await Note.find({});
 
-  const dateString = new Date().toLocaleDateString();
-  const fileName = dateString.split('.').reverse().join('.');
+  const date = new Date();
+  const fileName = `${date.getUTCFullYear()}.${date.getUTCMonth() + 1}.${date.getUTCDate()}`;
 
   fs.writeFile(`${fileName}.txt`, JSON.stringify(notes), () => console.log('The file has been saved!'));
 }
