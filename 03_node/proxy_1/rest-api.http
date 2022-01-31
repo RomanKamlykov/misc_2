@@ -1,0 +1,3 @@
+### GET request with a header
+GET http://localhost:5000/api?q=Boston
+Accept: application/json

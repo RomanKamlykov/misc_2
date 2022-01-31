@@ -1,0 +1,7 @@
+### GET request with a header
+GET http://localhost:5000/repos/bradtraversy
+Accept: application/json
+
+### GET request with a header
+GET http://localhost:5000/repos/getify
+Accept: application/json
