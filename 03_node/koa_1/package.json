@@ -1,0 +1,19 @@
+{
+  "name": "test_3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Roman Kamlykov <roman.kamlykov@codeit.pro>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "dependencies": {
+    "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "nodemon": "^2.0.15"
+  }
+}
