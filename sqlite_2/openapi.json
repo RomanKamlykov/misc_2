@@ -1,0 +1,30 @@
+{
+    "$schema": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json",
+    "line_endings": "unix",
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Sample title",
+        "version": "1"
+    },
+    "paths": {
+        "/users": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Sample description"
+                    }
+                }
+            }
+        }
+    }
+}

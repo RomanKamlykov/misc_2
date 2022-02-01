@@ -1,0 +1,14 @@
+###
+GET http://localhost:5000/
+
+###
+GET http://localhost:5000/categories/root
+
+###
+GET http://localhost:5000/categories/subcategories?title=Shoes276
+
+###
+GET http://localhost:5000/products/filter?title=Shoes276
+
+###
+GET http://localhost:5000/products/1

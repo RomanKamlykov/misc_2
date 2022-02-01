@@ -1,0 +1,18 @@
+{
+  "name": "test_1",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "dependencies": {
+    "fastify": "^3.27.0",
+    "fastify-typeorm-plugin": "^2.2.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
