@@ -5,7 +5,7 @@ GET http://localhost:5000/categories/root
 GET http://localhost:5000/categories/subcategories?title=fruits
 
 ###
-GET http://localhost:5000/categories/1
+GET http://localhost:5000/categories/2
 
 ###
 GET http://localhost:5000/products/filter?title=fruits

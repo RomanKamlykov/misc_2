@@ -6,14 +6,12 @@ const {PGUSER, PGPASSWORD, PGHOST, PGPORT, PGDATABASE} = process.env;
 
 const sequelize = new Sequelize(`postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}`);
 
-const db = {};
-db.Sequelize = Sequelize;
-db.sequelize = sequelize;
-db.products = require('./products.model')(sequelize, DataTypes);
-db.categories = require('./categories.model')(sequelize, DataTypes);
-db.productCategories = require('./product-categories.model')(sequelize, DataTypes);
+const Products = require('./products.model')(sequelize, DataTypes);
+const Categories = require('./categories.model')(sequelize, DataTypes);
+const ProductCategories = require('./product-categories.model')(sequelize, DataTypes);
 
 // associations
-db.categories.hasMany(db.categories, {sourceKey: 'parent_id', foreignKey: 'id'});
+Categories.hasMany(Categories, {as: 'r', sourceKey: 'parent_id', foreignKey: 'id'});
+Categories.belongsTo(Categories, {as: 'l', foreignKey: 'id', targetKey: 'parent_id'});
 
-module.exports = db;
+module.exports = {sequelize, Products, Categories, ProductCategories};

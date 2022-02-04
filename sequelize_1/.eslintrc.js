@@ -1,9 +1,6 @@
 // @ts-check
 'use strict';
 
-/**
- * @type {import('eslint').Linter.Config}
- */
 module.exports = {
     'env': {
         'es2021': true,
@@ -32,5 +29,5 @@ module.exports = {
         'comma-dangle': ['error', 'never'],
         'indent': ['error', 4]
     },
-    'ignorePatterns': ['node_modules']
+    'ignorePatterns': ['node_modules', 'package.json']
 };
