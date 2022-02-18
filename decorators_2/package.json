@@ -1,0 +1,24 @@
+{
+    "name": "test_3",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Roman Kamlykov <roman.kamlykov@codeit.pro>",
+    "license": "MIT",
+    "scripts": {
+        "start": "node main.js",
+        "dev": "nodemon main.ts"
+    },
+    "dependencies": {
+        "koa": "^2.13.4",
+        "koa-bodyparser": "^4.3.0",
+        "koa-router": "^10.1.1"
+    },
+    "devDependencies": {
+        "@types/koa": "^2.13.4",
+        "@types/koa-bodyparser": "^4.3.5",
+        "@types/koa-router": "^7.4.4",
+        "nodemon": "^2.0.15",
+        "ts-node": "^10.5.0",
+        "typescript": "^4.5.5"
+    }
+}

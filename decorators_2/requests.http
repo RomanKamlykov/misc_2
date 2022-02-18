@@ -1,0 +1,27 @@
+###
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/test
+
+###
+GET http://localhost:3000/params/123
+
+###
+GET http://localhost:3000/query?string=abc&number=123
+
+###
+POST http://localhost:3000/json
+content-type: application/json
+
+{
+    "string": "abc",
+    "number": 123
+}
+
+###
+POST http://localhost:3000/form
+Content-Type: application/x-www-form-urlencoded
+
+string=abc
+&number=123
